@@ -1,5 +1,7 @@
-require 'rails_helper'
- 
-describe Post do
- 
+class Post < ActiveRecord::Base
+
+    def post_summary
+        self.title + " - " + self.description
+      end
+
 end
